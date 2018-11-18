@@ -150,7 +150,9 @@ h3 {
 		<source src="drop.mp3" type="audio/mpeg" autoplay="true" preload="auto" loop="true">
 	</audio>
 
-
+	<audio id="but">
+		<source src="but.mp3" type="audio/mpeg">
+	</audio>
 	 
 	  <h2 id="poom">쓰레기가 쓰레기통에 가득 차있다.</h2>
 	  <h1 id="po">쓸만한건 없어보인다...</h1>
@@ -225,7 +227,7 @@ var toggle = "off";
 	var clickNumber = 0;
 	trash.onclick = function(){
 		
-		
+		but.play();
 			crun.play();
 			toggle = "on";
 			bx.style.display = "inline";
@@ -235,7 +237,7 @@ var toggle = "off";
 
 	water.onclick = function(){
 		
-		
+		but.play();
 			wate.play();
 			toggle = "on";
 			bx.style.display = "inline";
@@ -243,6 +245,7 @@ var toggle = "off";
 			ww.style.display = "inline";
 			}
 	ww.onclick = function(){
+		but.play();
 			wawa.play();
 			wa.style.display = "inline"
 			ww.style.display = "none"
@@ -256,11 +259,13 @@ var toggle = "off";
 
 
 	tt.onclick = function(){
+		but.play();
 			poom.style.display = "none"
 			okk.style.display = "inline"
 			po.style.display = "inline"
 }
 	okk.onclick = function(){
+		but.play();
 			tt.style.display = "none";
 			bx.style.display = "none";
 			poom.style.display = "none";
@@ -279,6 +284,7 @@ var toggle = "off";
 	floo.onclick = function(){
 		
 		if(toggle == "off"){
+			but.play();
 			poom.style.display = "none";
 			floormp.play();
 			toggle = "on";
